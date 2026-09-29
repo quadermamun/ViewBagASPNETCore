@@ -1,0 +1,99 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    // Layout = "~/Views/Shared/_Layout2.cshtml";
+    Layout = null;
+}
+
+<h1>Home Page</h1>
+<p>This is my Home Page</p>
+
+@ViewBag.MyName
+<br />
+@ViewData["data6"]
+<br />
+@ViewBag.data1
+<br />
+@ViewBag.data2
+<br />
+@ViewBag.data3
+
+@{
+    foreach (var item in ViewBag.data4)
+    {
+        <h2>@item</h2>
+    }
+}
+
+@{
+    foreach (var item in ViewBag.data5)
+    {
+        <h2>@item</h2>
+    }
+}
+
+
+@* View Data *@
+@* 
+@ViewData["data1"]
+<br />
+@ViewData["data2"]
+<br />
+@ViewData["data3"]
+<br />
+
+@{
+    foreach(var item in (string[])ViewData["data4"])
+    {
+        <h2>@item</h2>
+    }
+}
+
+@{
+    foreach (var item in (List<string>)ViewData["data5"])
+    {
+        <h2>@item</h2>
+    }
+} *@
+
+@* <h1>Current Data Nad Time IS: @DateTime.Now</h1>
+<h1>Current Year is: @DateTime.Now.Year</h1>
+
+@{
+    var name = "Welcome";
+    var age = 33;
+}
+
+<h2>Name:@name</h2>
+<h2>Age:@age</h2>
+
+
+@{
+    var MyName = "Mamun";
+    if(MyName.Equals("Mamun"))
+    {
+        <h3>Hey Mamun</h3>
+    }
+    else
+    {
+        <h3>Bye</h3>
+    }
+}
+
+@{
+    for(var i=0;i<10;i++)
+    {
+        <h3>@i</h3>       
+    }
+}
+
+@{
+    string[] names = { "Mamun", "Quader", "Abdul" };
+
+    foreach(var item in names)
+    {
+        <h3>@item</h3>
+    }
+
+} *@
